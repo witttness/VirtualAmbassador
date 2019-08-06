@@ -1,0 +1,130 @@
+<h4>Tell Us About You</h4>
+<p>
+  All questions are optional, but your responses help us make the Museum a more awesome place to visit. :-)
+</p>
+<hr>
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">What zip code are you from?</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter zip">
+    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">What age group are you in?</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="age" id="ageGroup1" value="17-or-under">
+      <label class="form-check-label" for="ageGroup1">
+        17 or under
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="age" id="ageGroup2" value="18-to-24">
+      <label class="form-check-label" for="ageGroup2">
+        18 to 24
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="age" id="ageGroup3" value="25-to-34">
+      <label class="form-check-label" for="ageGroup3">
+        25 to 34
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="age" id="ageGroup4" value="35-to-44">
+      <label class="form-check-label" for="ageGroup4">
+        35 to 44
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="age" id="ageGroup5" value="45-to-54">
+      <label class="form-check-label" for="ageGroup5">
+        45 to 54
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="age" id="ageGroup6" value="55-to-64">
+      <label class="form-check-label" for="ageGroup6">
+        55 to 64
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="age" id="ageGroup7" value="65-or-older">
+      <label class="form-check-label" for="ageGroup7">
+        65 or older
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="age" id="ageGroup8" value="no-response">
+      <label class="form-check-label" for="ageGroup8">
+        I'd rather not say.
+      </label>
+    </div>
+    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Are you visiting with a group?</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="grouping" id="grouping1" value="individual">
+      <label class="form-check-label" for="grouping1">
+        It's just me!
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="grouping" id="grouping2" value="school">
+      <label class="form-check-label" for="grouping2">
+        I'm here with a school group.
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="grouping" id="grouping3" value="adults-and-kids">
+      <label class="form-check-label" for="grouping3">
+        We ar one or more adults with one or more children.
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="grouping" id="grouping4" value="adults">
+      <label class="form-check-label" for="grouping4">
+        We are two or more adults.
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="age" id="grouping5" value="other">
+      <label class="form-check-label" for="grouping5">
+        We are something else.
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">What is your education level?</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="education" id="education1" value="highschool">
+      <label class="form-check-label" for="education1">
+        High school
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="education" id="education2" value="some-college">
+      <label class="form-check-label" for="education2">
+        Some college
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="education" id="education3" value="college-grad">
+      <label class="form-check-label" for="education3">
+        College graduate
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="education" id="education4" value="post=grad">
+      <label class="form-check-label" for="education4">
+        Post-gradudate
+      </label>
+    </div>
+  </div>
+  <!-- <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div> -->
+  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+  <a class="btn btn-primary" [routerLink]='["/map"]'>Submit</a>
+</form>

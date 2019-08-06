@@ -1,0 +1,6 @@
+<zxing-scanner 
+  [enable]="scannerOn" 
+  [torch]="lightOn"
+  [formats]="allowedFormats"
+  (torchCompatible)="onTorchCompatible($event)"
+  (scanSuccess)="scanSuccess($event)"></zxing-scanner>
