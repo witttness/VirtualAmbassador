@@ -1,12 +1,14 @@
 <div class="text-center">
-    <img src="../../assets/museum_logo.png" class="img-fluid" style="border: 20px solid white;">
+    <img src="../../assets/EconMus_horiz_pos_e.png" class="img-fluid">
+    <hr>
     <h1>Welcome!</h1>
-    <p>This is your <em>Virtual Ambassador</em> to escort you through the musuem and ensure you have the best
+    <p>This is your <em>Virtual Ambassador</em> to escort you through the museum and ensure you have the best
         experience possible.</p>
-    <p>Would you ming telling us a little about yourself?</p>
+    <p>Would you mind telling us a little about yourself?</p>
     <p>
         <a class="btn btn-primary btn-block" [routerLink]='["/visitorInfo"]'>Sure! I can tell you about me.</a>
-        <a class="btn btn-primary btn-block" [routerLink]='["/map"]'>No! Just Show Me a Map!</a>
+        <a class="btn btn-primary btn-block" (click)="startAnonymous()">No! Just Show Me a Map!</a>
+        <button class="btn btn-xs" (click)="goToExhibitDemo()">Demo</button>
     </p>
 
 </div>

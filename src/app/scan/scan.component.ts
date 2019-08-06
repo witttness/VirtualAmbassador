@@ -38,8 +38,8 @@ export class ScanComponent implements OnInit {
 
   scanSuccess(data: string) {
     console.info("SCAN", data);
-    if (data.substr(0, 2) == 'Ex')
-      this.router.navigateByUrl(`/exhibit/${data}`);
+    if (data == 'SCARCITY' || data == 'DECIDE')
+      this.router.navigateByUrl(`/exh-${data}`);
     else {
       console.error(`Unexpected scan data: ${data}`);
 

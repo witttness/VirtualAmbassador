@@ -1,0 +1,10 @@
+{
+    "/VAmbassadorService/api":{
+        "target": "https://ec2-52-87-186-251.compute-1.amazonaws.com",
+        "secure": true,
+        "pathRewrite": {
+            "^/VAmbassadorService/api": "https://ec2-52-87-186-251.compute-1.amazonaws.com/VAmbassadorService/api"
+        },
+        "logLevel": "debug"
+    }
+}

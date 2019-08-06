@@ -13,6 +13,10 @@ import { VisitorInfoComponent } from './visitor-info/visitor-info.component';
 import { MapComponent } from './map/map.component';
 import { ExhibitComponent } from './exhibit/exhibit.component';
 import { ScanComponent } from './scan/scan.component';
+import { SCARCITYComponent } from './exhibit/scarcity/scarcity.component';
+import { DECIDEComponent } from './exhibit/decide/decide.component';
+
+import { MyService } from './my.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { ScanComponent } from './scan/scan.component';
     VisitorInfoComponent,
     MapComponent,
     ExhibitComponent,
-    ScanComponent
+    ScanComponent,
+    SCARCITYComponent,
+    DECIDEComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,7 @@ import { ScanComponent } from './scan/scan.component';
     ZXingScannerModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [MyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
