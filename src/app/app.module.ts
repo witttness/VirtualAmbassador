@@ -18,6 +18,11 @@ import { SCARCITYComponent } from './exhibit/scarcity/scarcity.component';
 import { DECIDEComponent } from './exhibit/decide/decide.component';
 
 import { MyService } from './my.service';
+import { GetZipComponent } from './visitor-info/get-zip/get-zip.component';
+import { GetAgeComponent } from './visitor-info/get-age/get-age.component';
+import { GetGroupComponent } from './visitor-info/get-group/get-group.component';
+import { GetEducationComponent } from './visitor-info/get-education/get-education.component';
+import { VisitorThanksComponent } from './visitor-thanks/visitor-thanks.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,12 @@ import { MyService } from './my.service';
     ExhibitComponent,
     ScanComponent,
     SCARCITYComponent,
-    DECIDEComponent
+    DECIDEComponent,
+    GetZipComponent,
+    GetAgeComponent,
+    GetGroupComponent,
+    GetEducationComponent,
+    VisitorThanksComponent
   ],
   imports: [
     BrowserModule,

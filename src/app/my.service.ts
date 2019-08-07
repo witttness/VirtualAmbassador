@@ -9,16 +9,18 @@ export class MyService {
   private visitorId: number = -1;
   private readonly VIS_ID_KEY = 'VISITOR-ID';
 
+  visitorData: { zip?: string, age?: string, group?: string, education?: string } = {};
+
   constructor(private http: HttpClient) {
     this.loadVisitorId();
   }
 
-  startVisit(ageRange: string, zipCode: string, groupType: string, education: string) {
+  startVisit() {
     let data = {
-      "AgeRange": ageRange,
-      "ZipCode": zipCode,
-      "GroupType": groupType,
-      "EducationLevel": education
+      "AgeRange": this.visitorData.age,
+      "ZipCode": this.visitorData.zip,
+      "GroupType": this.visitorData.group,
+      "EducationLevel": this.visitorData.education
     };
     this.http.post<number>(`/VAmbassadorService/api/visit/Start`, data)
       .toPromise()
@@ -41,7 +43,11 @@ export class MyService {
       "StationId": stationId,
       "Description": "",
     };
-    this.http.post<number>(`/VAmbassadorService/api/visit/SaveStats`, data);
+    this.http.post<number>(`/VAmbassadorService/api/visit/SaveStats`, data)
+      .toPromise()
+      .then(id => {
+        console.info('saveStats id', id);
+      });
   }
 
   saveRating(stationId: string, rating: number): void {
@@ -50,7 +56,11 @@ export class MyService {
       "StationId": stationId,
       "Rate": rating
     };
-    this.http.post<number>(`/VAmbassadorService/api/visit/SaveRating`, data);
+    this.http.post<number>(`/VAmbassadorService/api/visit/SaveRating`, data)
+    .toPromise()
+    .then(id => {
+      console.info('saveRating id', id);
+    });
   }
 
   storeVisitorId(id: number) {
@@ -64,5 +74,21 @@ export class MyService {
     if (visId)
       this.visitorId = visId;
     return visId;
+  }
+
+  setVisitorZip(zip: string) {
+    this.visitorData.zip = zip;
+  }
+
+  setVisitorAge(age: string) {
+    this.visitorData.age = age;
+  }
+
+  setVisitorGroup(group: string) {
+    this.visitorData.group = group;
+  }
+
+  setVisitorEducation(education: string) {
+    this.visitorData.education = education;
   }
 }

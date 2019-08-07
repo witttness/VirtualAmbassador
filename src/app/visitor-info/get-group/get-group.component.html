@@ -1,0 +1,41 @@
+<div class="form-group">
+    <label for="exampleInputEmail1">Are you visiting with a group?</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="grouping" id="grouping1" value="Individual" [(ngModel)]="group">
+      <label class="form-check-label" for="grouping1">
+        It's just me!
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="grouping" id="grouping2" value="School" [(ngModel)]="group">
+      <label class="form-check-label" for="grouping2">
+        I'm here with a school group.
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="grouping" id="grouping3" value="Adults and Kids" [(ngModel)]="group">
+      <label class="form-check-label" for="grouping3">
+        We are one or more adults with one or more children.
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="grouping" id="grouping4" value="Adults" [(ngModel)]="group">
+      <label class="form-check-label" for="grouping4">
+        We are two or more adults.
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="grouping" id="grouping5" value="Other" [(ngModel)]="group">
+      <label class="form-check-label" for="grouping5">
+        We are something else.
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+        <button type="button" class="btn btn-default btn-block" (click)="goBack()">&larr; Back</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn btn-primary btn-block" (click)="goNext()">Next &rarr;</button>
+    </div>
+</div>

@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { BarcodeFormat } from '@zxing/library';
+import { MyService } from '../my.service';
 
 @Component({
   selector: 'app-scan',
@@ -17,7 +18,7 @@ export class ScanComponent implements OnInit {
     BarcodeFormat.DATA_MATRIX
   ];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private svc: MyService) { }
 
   ngOnInit() {
     this.scannerOn = true;
@@ -38,9 +39,10 @@ export class ScanComponent implements OnInit {
 
   scanSuccess(data: string) {
     console.info("SCAN", data);
-    if (data == 'SCARCITY' || data == 'DECIDE')
+    if (data == 'SCARCITY' || data == 'DECIDE') {
+      this.svc.visitExhibit(data);
       this.router.navigateByUrl(`/exh-${data}`);
-    else {
+    } else {
       console.error(`Unexpected scan data: ${data}`);
 
       //REMOVE THIS:

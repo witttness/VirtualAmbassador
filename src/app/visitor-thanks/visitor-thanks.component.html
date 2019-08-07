@@ -1,0 +1,22 @@
+<div class="text-center">
+    <h1>Thanks!</h1>
+    A virtual slow clap be bestowed upon you!<br>
+    Here's what you told us:
+</div>
+<ol>
+    <li><strong>Your zip:</strong> {{ data.zip }}</li>
+    <li><strong>Your age:</strong> {{ data.age }}</li>
+    <li><strong>Your group:</strong> {{ data.group }}</li>
+    <li><strong>Your education level:</strong> {{ data.education }}</li>
+</ol>
+<div class="row">
+    <div class="col">
+        <a class="btn btn-block btn-default" [routerLink]='["/visitorInfo/getEducation"]'>&larr; Back</a>
+    </div>
+    <div class="col">
+        <a class="btn btn-block btn-default" [routerLink]='["/visitorInfo/getZip"]'>&lArr; Way back</a>
+    </div>
+    <div class="col">
+        <button class="btn btn-block btn-primary" (click)="startVisit()">I'm good. &rarr;</button>
+    </div>
+</div>

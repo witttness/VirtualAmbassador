@@ -1,0 +1,13 @@
+<div class="form-group">
+    <label for="exampleInputEmail1">What zip code are you from?</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter zip" [(ngModel)]="zip">
+    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+  </div>
+<div class="row">
+    <div class="col">
+        <button type="button" class="btn btn-default btn-block" (click)="goBack()">&larr; Back</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn btn-primary btn-block" (click)="goNext()">Next &rarr;</button>
+    </div>
+</div>

@@ -3,11 +3,14 @@
   All questions are optional, but your responses help us make the Museum a more awesome place to visit. :-)
 </p>
 <hr>
-<form>
+<div [@routeAnimations]="prepareRoute(outlet)" class="container">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
+
+<!-- <form>
   <div class="form-group">
     <label for="exampleInputEmail1">What zip code are you from?</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter zip">
-    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">What age group are you in?</label>
@@ -59,7 +62,6 @@
         I'd rather not say.
       </label>
     </div>
-    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Are you visiting with a group?</label>
@@ -121,10 +123,5 @@
       </label>
     </div>
   </div>
-  <!-- <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div> -->
-  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
   <a class="btn btn-primary" [routerLink]='["/map"]'>Submit</a>
-</form>
+</form> -->

@@ -1,0 +1,60 @@
+<div class="form-group">
+    <label for="exampleInputEmail1">What age group are you in?</label>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="age" id="ageGroup1" value="17 or under" [(ngModel)]="age">
+        <label class="form-check-label" for="ageGroup1">
+            17 or under
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="age" id="ageGroup2" value="18 to 24" [(ngModel)]="age">
+        <label class="form-check-label" for="ageGroup2">
+            18 to 24
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="age" id="ageGroup3" value="25 to 34" [(ngModel)]="age">
+        <label class="form-check-label" for="ageGroup3">
+            25 to 34
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="age" id="ageGroup4" value="35 to 44" [(ngModel)]="age">
+        <label class="form-check-label" for="ageGroup4">
+            35 to 44
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="age" id="ageGroup5" value="45 to 54" [(ngModel)]="age">
+        <label class="form-check-label" for="ageGroup5">
+            45 to 54
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="age" id="ageGroup6" value="55 to 64" [(ngModel)]="age">
+        <label class="form-check-label" for="ageGroup6">
+            55 to 64
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="age" id="ageGroup7" value="65 or older" [(ngModel)]="age">
+        <label class="form-check-label" for="ageGroup7">
+            65 or older
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="age" id="ageGroup8" value="No Response" [(ngModel)]="age">
+        <label class="form-check-label" for="ageGroup8">
+            I'd rather not say.
+        </label>
+    </div>
+    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+</div>
+<div class="row">
+    <div class="col">
+        <button type="button" class="btn btn-default btn-block" (click)="goBack()">&larr; Back</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn btn-primary btn-block" (click)="goNext()">Next &rarr;</button>
+    </div>
+</div>

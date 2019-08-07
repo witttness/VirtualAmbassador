@@ -1,0 +1,35 @@
+<div class="form-group">
+    <label for="exampleInputEmail1">What is your education level?</label>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="education" id="education1" value="High School" [(ngModel)]="education">
+        <label class="form-check-label" for="education1">
+            High school
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="education" id="education2" value="Some College" [(ngModel)]="education">
+        <label class="form-check-label" for="education2">
+            Some college
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="education" id="education3" value="College Grad" [(ngModel)]="education">
+        <label class="form-check-label" for="education3">
+            College graduate
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="education" id="education4" value="Post Grad" [(ngModel)]="education">
+        <label class="form-check-label" for="education4">
+            Post-gradudate
+        </label>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <button type="button" class="btn btn-default btn-block" (click)="goBack()">&larr; Back</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn btn-primary btn-block" (click)="goNext()">Next &rarr;</button>
+    </div>
+</div>
