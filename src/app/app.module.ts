@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { NgQrScannerModule } from 'angular2-qrscanner';
 import { StarRatingModule } from 'angular-star-rating';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -48,6 +49,7 @@ import { VisitorThanksComponent } from './visitor-thanks/visitor-thanks.componen
     HttpClientModule,
     FormsModule,
     ZXingScannerModule,
+    NgQrScannerModule,
     StarRatingModule.forRoot(),
     AppRoutingModule
   ],

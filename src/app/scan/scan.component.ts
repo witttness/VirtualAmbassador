@@ -9,7 +9,7 @@ import { MyService } from '../my.service';
   styleUrls: ['./scan.component.scss']
 })
 export class ScanComponent implements OnInit {
-  scannerOn: boolean = false;
+  scannerOn: boolean = true;
   lightOn: boolean = false;
   allowedFormats = [
     BarcodeFormat.QR_CODE,
@@ -21,11 +21,11 @@ export class ScanComponent implements OnInit {
   constructor(private router: Router, private svc: MyService) { }
 
   ngOnInit() {
-    this.scannerOn = true;
+    //this.scannerOn = true;
   }
 
   ngOnDestroy() {
-    this.lightOn = false;
+    //this.lightOn = false;
     this.scannerOn = false;
   }
 
@@ -48,5 +48,9 @@ export class ScanComponent implements OnInit {
       //REMOVE THIS:
       //this.router.navigateByUrl(`/exhibit/ex1`);
     }
+  }
+
+  onRead(data){
+    console.info(data);
   }
 }
