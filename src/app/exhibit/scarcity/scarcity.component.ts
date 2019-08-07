@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyService } from 'src/app/my.service';
 
 @Component({
   selector: 'app-scarcity',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SCARCITYComponent implements OnInit {
 
-  constructor() { }
+  constructor(private svc: MyService) { }
 
   ngOnInit() {
   }
 
+  rateExhibit(e) {
+    console.info('rate exhibit', e);
+    this.svc.saveRating('SCARCITY', e.rating);
+  }
 }
